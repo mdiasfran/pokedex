@@ -3,64 +3,75 @@
 $padding: rem-calc(20);
 
 :host {
-  display: flex;
-  justify-content: space-between;
-
-  .pokemon {
-    background: var(--branco);
+  .listagem {
     display: flex;
-    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: $padding 0;
 
-    width: calc(49% - 2.5rem);
-    height: rem-calc(157 - 40);
-    padding: $padding;
+    .pokemon {
+      background: var(--branco);
+      display: flex;
+      position: relative;
 
-    border-radius: rem-calc(10);
+      width: calc(49% - 2.5rem);
+      height: rem-calc(157 - 40);
+      padding: $padding;
+      margin-bottom: rem-calc(10);
 
-    &__status {
-      h2 {
-        font-size: rem-calc(22);
-        font-style: italic;
-        font-weight: 700;
+      border-radius: rem-calc(10);
 
-        margin-bottom: rem-calc(10);
-      }
+      text-decoration: none;
+      color: var(--primary-color);
 
-      ul {
-        display: flex;
-        flex-direction: column;
+      &__status {
+        h2 {
+          font-size: rem-calc(22);
+          font-style: italic;
+          font-weight: 700;
+          text-transform: capitalize;
 
-        li {
-          background: var(--cinza);
-          font-size: rem-calc(10);
-          width: rem-calc(60);
+          margin-bottom: rem-calc(10);
+        }
 
+        ul {
           display: flex;
-          justify-content: center;
-          align-items: center;
+          flex-direction: column;
 
-          border-radius: rem-calc(50);
-          margin-bottom: rem-calc(5);
+          li {
+            background: var(--cinza);
+            font-size: rem-calc(10);
+            width: rem-calc(60);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: rem-calc(50);
+            margin-bottom: rem-calc(5);
+          }
         }
       }
-    }
 
-    &__image {
-      height: rem-calc(90);
-      width: rem-calc(110);
+      &__image {
+        height: rem-calc(90);
+        width: rem-calc(110);
 
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      bottom: $padding;
-      right: $padding;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: $padding;
+        right: $padding;
 
-      background: url("../../../assets/bg/bg-list-pokemons.svg");
+        background: url("../../../assets/bg/bg-list-pokemons.svg");
 
-      img {
-        width: rem-calc(80);
+        img {
+          width: rem-calc(60);
+        }
       }
     }
   }
 }
+
+
