@@ -25,7 +25,7 @@ public apiError: boolean = false
     this.getPokemon;
   }
 
- getPokemon() {
+public getPokemon() {
     const id = this.activatedRoute.snapshot.params['id'];
     const pokemon = this.pokeApiService.apiGetPokemons(
       `${this.urlPokemon}/${id}`
